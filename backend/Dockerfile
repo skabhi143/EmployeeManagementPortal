@@ -1,14 +1,12 @@
-# Use official OpenJDK image
-FROM eclipse-temurin:17-jdk-alpine
-
-# Set working directory
+# Build Stage
+FROM maven:3.9.6-eclipse-temurin-17 AS builder
 WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
 
-# Copy jar file
-COPY target/backend-0.0.1-SNAPSHOT.jar app.jar
-
-# Expose port
+# Run Stage
+FROM eclipse-temurin:17-jdk-alpine
+WORKDIR /app
+COPY --from=builder /app/target/backend-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
-
-# Run application
 ENTRYPOINT ["java","-jar","app.jar"]
