@@ -1,50 +1,208 @@
-# Employee Management Portal
+# 🚀 Employee Management Portal
 
-Full-stack **Employee Management Portal** scaffold containing:
-- `backend/` — Spring Boot REST API (Java, Maven, Hibernate, MySQL)
-- `frontend-react/` — React-based frontend (recommended)
-- `frontend-jsp/` — JSP-based frontend (Spring MVC + JSP) for a Java-only stack
+![CI](https://github.com/skabhi143/EmployeeManagementPortal/actions/workflows/ci.yml/badge.svg)
 
-This scaffold is prepared for @https://github.com/skabhi143/Abhishek-sk and is ready to be filled with actual business logic, styles, and tests.
-
-## Features (scaffold)
-- Employee CRUD endpoints (starter controller + repository)
-- Example React components to consume backend APIs
-- Example JSP pages for a Spring MVC-based view layer
-- README, LICENSE (MIT), `.gitignore`
-
-## Tech Stack
-- Backend: Java, Spring Boot, Spring Data JPA, Maven, MySQL
-- Frontend (recommended): React, Axios, Bootstrap
-- Frontend (Java-only): JSP, JSTL, Bootstrap
-
-## Quick start
-
-### Backend
-1. Edit `backend/src/main/resources/application.properties` with your MySQL credentials.
-2. From `backend/` run:
-```bash
-mvn clean package
-mvn spring-boot:run
-```
-Backend default: `http://localhost:8080`
-
-### Frontend (React)
-1. `cd frontend-react`
-2. `npm install`
-3. `npm start` (runs on `http://localhost:3000`)
-
-React will call backend APIs at `http://localhost:8080/api/...`. Configure proxy if needed.
-
-### Frontend (JSP)
-1. The JSP version runs together with backend (Spring MVC). Build & run backend and access JSP pages on port 8080.
-
-## How to use
-- Replace placeholder code in `backend` with your entities, services, and security.
-- Replace React components in `frontend-react/src/components` with full UI and routes.
-- Use `frontend-jsp` as a quick Java-only front-end example inside the same Spring Boot app.
-
-## License
-MIT
+A production-ready full-stack **Employee Management System** built using **Spring Boot (Java)** and **React.js**.  
+This application demonstrates secure REST API development, JWT authentication, database integration, and CI automation using GitHub Actions.
 
 ---
+
+## 📌 Project Overview
+
+The Employee Management Portal enables organizations to manage employee records efficiently through a secure and scalable system.
+
+This project showcases:
+
+- Full-stack development
+- Secure backend architecture
+- RESTful API design
+- Authentication & authorization
+- CI/CD pipeline setup
+- Real-world project structuring
+
+---
+
+## ✨ Key Features
+
+- ✅ Employee CRUD (Create, Read, Update, Delete)
+- ✅ RESTful APIs with Spring Boot
+- ✅ MySQL Database Integration
+- ✅ Spring Security + JWT Authentication
+- ✅ Role-ready architecture (extendable)
+- ✅ React Frontend with Routing
+- ✅ Axios for API communication
+- ✅ Bootstrap responsive UI
+- ✅ CI Pipeline using GitHub Actions
+
+---
+
+## 🏗️ Architecture
+
+Frontend (React)  
+⬇  
+REST API (Spring Boot)  
+⬇  
+Service Layer  
+⬇  
+JPA/Hibernate  
+⬇  
+MySQL Database  
+
+---
+
+## 🛠️ Technology Stack
+
+### Backend
+- Java 17
+- Spring Boot 3
+- Spring Data JPA (Hibernate)
+- Spring Security
+- JWT Authentication
+- Maven
+- MySQL
+
+### Frontend
+- React 18
+- React Router DOM
+- Axios
+- Bootstrap
+- Node.js
+
+### DevOps
+- GitHub Actions (Continuous Integration)
+
+---
+
+## 📂 Project Structure
+
+EmployeeManagementPortal  
+│  
+├── backend  
+│   ├── controller  
+│   ├── service  
+│   ├── repository  
+│   ├── model  
+│   └── pom.xml  
+│  
+├── frontend-react  
+│   ├── components  
+│   ├── services  
+│   └── package.json  
+│  
+├── frontend-jsp (optional Java-only UI)  
+└── .github/workflows/ci.yml  
+
+---
+
+## ⚙️ Backend Setup
+
+### 1️⃣ Configure Database
+
+Edit:
+
+backend/src/main/resources/application.properties
+
+Example:
+
+spring.datasource.url=jdbc:mysql://localhost:3306/employee_db  
+spring.datasource.username=your_username  
+spring.datasource.password=your_password  
+
+---
+
+### 2️⃣ Run Backend
+
+cd backend  
+mvn clean install  
+mvn spring-boot:run  
+
+Backend runs at:
+
+http://localhost:8080
+
+---
+
+## 💻 Frontend Setup (React)
+
+cd frontend-react  
+npm install  
+npm start  
+
+Frontend runs at:
+
+http://localhost:3000  
+
+APIs consumed from:
+
+http://localhost:8080/api/...
+
+---
+
+## 🔐 Security
+
+- Spring Security configuration
+- JWT-based authentication
+- Protected API endpoints
+- Stateless session handling
+
+---
+
+## 🔄 Continuous Integration (CI)
+
+This project uses **GitHub Actions**.
+
+On every push to the main branch:
+
+- Backend is built using Maven
+- Frontend dependencies are installed
+- Frontend production build is generated
+- Build status is automatically verified
+
+Check build status in the **Actions** tab.
+
+---
+
+## 📊 Sample API Endpoints
+
+GET     /api/employees  
+POST    /api/employees  
+PUT     /api/employees/{id}  
+DELETE  /api/employees/{id}  
+
+---
+
+## 🚀 Future Enhancements
+
+- Role-Based Access Control (Admin/User)
+- Pagination & Sorting
+- Docker containerization
+- Cloud deployment (AWS / Azure)
+- Unit & Integration Testing
+- Swagger API Documentation
+
+---
+
+## 💼 Resume Highlights
+
+✔ Designed and developed full-stack application using Spring Boot and React  
+✔ Implemented JWT-based authentication and Spring Security  
+✔ Integrated MySQL using JPA/Hibernate  
+✔ Configured CI pipeline using GitHub Actions  
+✔ Followed layered architecture (Controller-Service-Repository pattern)  
+
+---
+
+## 👨‍💻 Author
+
+Abhishek S K  
+GitHub: https://github.com/skabhi143  
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+⭐ If you found this project useful, please give it a star!
